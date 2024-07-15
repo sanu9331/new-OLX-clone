@@ -1,0 +1,40 @@
+.categoriesDropdown {
+    position: absolute;
+    top: 50px;
+    /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+}
+
+.dropdownHeader {
+    display: flex;
+    align-items: center;
+}
+
+.dropdownHeader span {
+    margin-right: 8px;
+}
+
+.categoriesContent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category {
+    flex: 1 0 20%;
+    padding: 10px;
+}
+
+.category h4 {
+    margin-bottom: 10px;
+}
+
+.category p {
+    margin: 5px 0;
+}

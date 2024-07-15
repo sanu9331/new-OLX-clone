@@ -1,0 +1,250 @@
+ /* .moreView {
+   margin: 16px 16px 24px;
+   padding: 16px 16px 32px;
+   background-color: #ebeeef;
+   border-radius: 4px;
+ }
+
+ .heading {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+ }
+
+ .heading :first-child {
+   font-size: 24px;
+   color: #002f34;
+ }
+
+ .heading :last-child {
+   font-size: 14px;
+   color: #002f34;
+ }
+
+ .recommendations .cards {
+   padding: 0px 1rem;
+ }
+
+ .moreView .cards {
+   white-space: nowrap;
+   overflow-x: scroll;
+   overflow-y: hidden;
+ }
+
+
+ .card {
+   margin-right: 15px;
+   padding: 13px;
+   max-width: 222px;
+   width: 222px;
+   height: 270px;
+   display: inline-block;
+   cursor: pointer;
+   transition: transform 0.2s ease-in-out;
+ }
+
+ .card:hover {
+   transform: scale(1.05);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   border-radius: 8px;
+   cursor: pointer;
+ }
+
+ .card .favorite {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+ }
+
+ .card .image {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+ }
+
+ .card .image img {
+   height: 100px;
+   max-width: 100%;
+   max-height: 100%;
+   min-height: 100%;
+   text-align: center;
+ }
+
+ .card .content .rate {
+   margin-top: 10px;
+   font-size: larger;
+   font-weight: bold;
+ }
+
+ .card .content .kilometer {
+   font-size: medium;
+ }
+
+ .card .content .name {
+   font-size: small;
+ }
+
+ .card .date {
+   display: flex;
+   justify-content: flex-end;
+   font-size: small;
+ }
+
+ .recommendations {
+   margin: 16px 16px 24px;
+ }
+
+ .recommendations .heading span {
+   font-size: 24px;
+   color: #002f34;
+ }
+
+ .loadmore-button {
+   background-color: white;
+   border: solid rgb(120, 120, 120);
+   border-radius: 4px;
+ }
+
+ .loadmore-button:hover {
+   border: solid black;
+ } */
+ .moreView {
+   margin: 16px 16px 24px;
+   padding: 16px 16px 32px;
+   background-color: #ebeeef;
+   border-radius: 4px;
+ }
+
+ .heading {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+ }
+
+ .heading :first-child {
+   font-size: 24px;
+   color: #002f34;
+ }
+
+ .heading :last-child {
+   font-size: 14px;
+   color: #002f34;
+ }
+
+ .recommendations .cards {
+   /* display: flex; */
+   /* white-space: nowrap; */
+   /* overflow-x: scroll; */
+   /* overflow-y: hidden; */
+   padding: 0px 1rem;
+ }
+
+ .moreView .cards {
+   white-space: nowrap;
+   overflow-x: scroll;
+   overflow-y: hidden;
+   width: 95vw;
+ }
+
+
+ .card {
+   margin-right: 15px;
+   padding: 13px;
+   max-width: 222px;
+   width: 222px;
+   height: 270px;
+   display: inline-block;
+   cursor: pointer;
+   transition: transform 0.2s ease-in-out;
+
+ }
+
+ .card:hover {
+   transform: scale(1.05);
+   /* Scale up slightly on hover */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   /* Add a subtle shadow */
+   border-radius: 8px;
+   /* Rounded corners */
+   cursor: pointer;
+   /* Change cursor to pointer */
+ }
+
+ .card .favorite {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+ }
+
+ .card .image {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .card .image img {
+   height: 100px;
+   max-width: 100%;
+   max-height: 100%;
+   min-height: 100%;
+   text-align: center;
+ }
+
+ .card .content .rate {
+   margin-top: 10px;
+   font-size: larger;
+   font-weight: bold;
+ }
+
+ .card .content .kilometer {
+   font-size: medium;
+ }
+
+ .card .content .name {
+   font-size: small;
+ }
+
+ .card .date {
+   display: flex;
+   justify-content: flex-end;
+   font-size: small;
+ }
+
+ .recommendations {
+   margin: 16px 16px 24px;
+   background-color: #ebeeef;
+ }
+
+ .recommendations .heading span {
+   font-size: 24px;
+   color: #002f34;
+ }
+
+ .loadmore-button {
+   background-color: white;
+   border: solid rgb(120, 120, 120);
+   border-radius: 4px;
+ }
+
+ .loadmore-button:hover {
+   border: solid black;
+ }
+
+ /* sanu */
+ .heading .quickMenu {
+   background-color: #7979cc;
+   border-radius: 8px;
+   padding: 0rem 2rem;
+   color: white;
+ }
+
+ .heading .fresh-recommendations {
+   /* background-color: #4A4A8D; */
+   background-color: #7979cc;
+   border-radius: 8px;
+   padding: 0rem 2rem;
+   color: white !important;
+ }

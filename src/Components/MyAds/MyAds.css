@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.my-ads {
+    padding: 50px;
+    padding-top: 80px;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tab.active {
+    border-bottom: 2px solid #004d40;
+    font-weight: bold;
+}
+
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-bar input {
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.filter-buttons {
+    display: flex;
+}
+
+.filter-buttons button {
+    background-color: #e0f7fa;
+    border: none;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.filter-buttons button.active {
+    background-color: #80deea;
+}
+
+.ad-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    /* Add this to position .ad-actions absolutely */
+}
+
+.ad-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+}
+
+.ad-date {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.ad-details {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.ad-details img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.ad-info {
+    flex: 1;
+}
+
+.ad-info h3 {
+    margin: 0;
+}
+
+.ad-actions {
+    position: absolute;
+    top: 3rem;
+    /* Adjust the top value as needed */
+    right: 10px;
+    /* Adjust the right value as needed */
+    text-align: center;
+}
+
+.ad-actions .options-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.ad-actions .options-menu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ad-actions .options-menu button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    color: black;
+}
+
+.ad-actions .options-menu button:hover {
+    background-color: #f4f4f4;
+}
+
+.ad-actions button {
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ad-stats {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ad-stats span {
+    flex: 1;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tab {
+        padding: 5px 10px;
+    }
+
+    .filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-bar input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .filter-buttons {
+        flex-wrap: wrap;
+    }
+
+    .filter-buttons button {
+        margin: 5px 0;
+    }
+
+    .ad-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ad-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ad-details img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .ad-info h3,
+    .ad-info p {
+        font-size: 14px;
+    }
+
+    .ad-actions {
+        top: 10px;
+        /* Adjust if necessary */
+        right: 10px;
+        /* Adjust if necessary */
+    }
+
+    .ad-actions button {
+        padding: 5px 10px;
+    }
+
+    .ad-stats {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ad-stats span {
+        font-size: 12px;
+    }
+
+    .my-ads {
+        padding: 20px;
+        padding-top: 80px;
+    }
+}

@@ -1,0 +1,120 @@
+.viewParentDiv {
+  padding-top: 4em;
+  display: flex;
+  justify-content: center;
+}
+
+.viewParentDiv .contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.viewParentDiv .imageShowDiv {
+  padding: 1rem 2rem;
+  width: 35vw;
+  height: 35vw;
+  /* Set a fixed height to maintain aspect ratio */
+  max-height: 90vh;
+  /* Limit maximum height for better layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewParentDiv .imageShowDiv .image-gallery-slide-wrapper {
+  width: 100%;
+  height: 100%;
+  /* Ensure the slide wrapper respects the fixed height */
+}
+
+.viewParentDiv .imageShowDiv .image-gallery-image {
+  object-fit: contain;
+  /* Ensure images fit within their container */
+  width: 100%;
+  height: 100%;
+  /* Ensure images fit within their container */
+}
+
+.image-gallery-thumbnail {
+  width: 80px;
+  /* Set a fixed width for thumbnails */
+  height: 80px;
+  /* Set a fixed height for thumbnails */
+  object-fit: cover;
+  /* Ensure thumbnails are covered within their container */
+}
+
+.viewParentDiv .rightSection {
+  padding: 0;
+  margin-top: 3em;
+  width: 20vw;
+}
+
+.viewParentDiv .rightSection .productDetails :first-child {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #002f34;
+  font-size: 34px;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+
+.viewParentDiv .rightSection .productDetails {
+  /* border: 1px solid black; */
+  border: 1px solid #cbc9c9;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+
+.viewParentDiv .rightSection .contactDetails {
+  /* border: 1px solid black; */
+  border: 1px solid #cbc9c9;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+
+
+.viewParentDiv .rightSection .contactDetails :first-child {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #002f34;
+  font-weight: 400;
+  padding: 0;
+}
+
+.description {
+  width: 55vw;
+  /* margin-top: 1rem; */
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  /* border: 1px solid black; */
+  border: 1px solid #cbc9c9;
+  border-radius: 6px;
+  padding: 2rem 2rem;
+}
+
+.description hr {
+  margin: 1rem 2rem;
+}
+
+/* Custom arrow styles */
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+  width: 30px;
+  /* Adjust width as needed */
+  height: 30px;
+  /* Adjust height as needed */
+}
+
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+  width: 30px;
+  /* Adjust width as needed */
+  height: 30px;
+  /* Adjust height as needed */
+}
