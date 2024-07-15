@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Heart from '../../assets/Heart';
 import './Post.css';
 import { useNavigate } from 'react-router-dom';
@@ -27,6 +27,9 @@ function Posts() {
 
   //   })
   // }, [])
+  useEffect(() => {
+
+  }, [])
 
   const [visiblePosts, setVisiblePosts] = useState(6); // Initial number of posts to display
 
