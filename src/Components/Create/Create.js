@@ -18,11 +18,11 @@ const Create = () => {
 
   const validate = () => {
     let tempErrors = {};
-    if (!name) tempErrors.name = "Name is required.";
-    if (!category) tempErrors.category = "Category is required.";
-    if (!price) tempErrors.price = "Price is required.";
+    if (!name.trim()) tempErrors.name = "Name is required.";
+    if (!category.trim()) tempErrors.category = "Category is required.";
+    if (!price.trim()) tempErrors.price = "Price is required.";
     if (price && (isNaN(price) || price <= 0)) tempErrors.price = "Price must be a valid number greater than 0.";
-    if (!description) tempErrors.description = "Description is required.";
+    if (!description.trim()) tempErrors.description = "Description is required.";
     if (image.length === 0) tempErrors.image = "At least one image is required.";
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
@@ -39,11 +39,11 @@ const Create = () => {
     );
 
     firebase.firestore().collection('products').add({
-      name,
-      category,
-      price,
+      name: name.trim(),
+      category: category.trim(),
+      price: price.trim(),
       url,
-      description,
+      description: description.trim(),
       userId: isAuthenticated.uid,
       createdAt: date.toDateString(),
     });

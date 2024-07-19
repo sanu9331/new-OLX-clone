@@ -29,7 +29,7 @@ function Posts() {
   // }, [])
   useEffect(() => {
 
-  }, [])
+  },)
 
   const [visiblePosts, setVisiblePosts] = useState(6); // Initial number of posts to display
 

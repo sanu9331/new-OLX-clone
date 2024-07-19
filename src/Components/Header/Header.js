@@ -85,7 +85,7 @@ function Header() {
               <Dropdown.Item as={Link} to=""><TfiSettings /> Settings</Dropdown.Item>
               <Dropdown.Item onClick={() => {
                 firebase.auth().signOut();
-                navigate('/login');
+                // navigate('/login');
               }}><VscSignIn /> Logout</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>

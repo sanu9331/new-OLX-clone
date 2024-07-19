@@ -47,7 +47,7 @@ function View() {
         <div>
           <div className="description">
             <h4>Details</h4>
-            <span>Brand: {postDetails.brand}</span>
+            <span> {postDetails.brand}</span>
             <hr />
             <h4>Description</h4>
             <span>{postDetails.description}</span>

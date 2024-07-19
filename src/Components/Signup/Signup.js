@@ -21,6 +21,12 @@ export default function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Trim input values
+    const trimmedUsername = username.trim();
+    const trimmedEmail = email.trim();
+    const trimmedPhone = phone.trim();
+    const trimmedPassword = password.trim();
+
     // Reset previous errors
     setUsernameError('');
     setEmailError('');
@@ -28,40 +34,40 @@ export default function Signup() {
     setPasswordError('');
 
     // Basic username validation
-    if (!username) {
+    if (!trimmedUsername) {
       setUsernameError('Username is required');
       return;
     }
 
     // Basic email validation
-    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+    if (!trimmedEmail || !/\S+@\S+\.\S+/.test(trimmedEmail)) {
       setEmailError('Please enter a valid email address');
       return;
     }
 
     // Basic phone number validation (optional)
-    if (!phone || !/^\d{10}$/.test(phone)) {
+    if (!trimmedPhone || !/^\d{10}$/.test(trimmedPhone)) {
       setPhoneError('Please enter a valid 10-digit phone number');
       return;
     }
 
     // Basic password length validation
-    if (!password || password.length < 6) {
+    if (!trimmedPassword || trimmedPassword.length < 6) {
       setPasswordError('Password must be at least 6 characters long');
       return;
     }
 
     // Create user with Firebase authentication
-    firebase.auth().createUserWithEmailAndPassword(email, password)
+    firebase.auth().createUserWithEmailAndPassword(trimmedEmail, trimmedPassword)
       .then((result) => {
         console.log("User created: ", result.user);
-        result.user.updateProfile({ displayName: username })
+        result.user.updateProfile({ displayName: trimmedUsername })
           .then(() => {
             // Add user details to Firestore
             firebase.firestore().collection('users').add({
               id: result.user.uid,
-              username: username,
-              phone: phone
+              username: trimmedUsername,
+              phone: trimmedPhone
             }).then(() => {
               console.log("User added to Firestore");
               navigate('/login');
@@ -84,7 +90,7 @@ export default function Signup() {
             className="input"
             type="text"
             value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => setUsername(e.target.value.trim())}
             id="username"
             name="username"
           />
@@ -97,7 +103,7 @@ export default function Signup() {
             className="input"
             type="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value.trim())}
             id="email"
             name="email"
           />
@@ -110,7 +116,7 @@ export default function Signup() {
             className="input"
             type="tel"
             value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            onChange={(e) => setPhone(e.target.value.trim())}
             id="phone"
             name="phone"
           />
@@ -123,7 +129,7 @@ export default function Signup() {
             className="input"
             type="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value.trim())}
             id="password"
             name="password"
           />
